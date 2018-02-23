@@ -7,7 +7,7 @@ const destBucket = process.env.DEST_BUCKET;
 const blurRadius = process.env.BLUR_RADIUS;
 
 exports.handler = function main(event, context) {
-  // Fail on mising data
+  // Fail on missing data
   if (!destBucket || !blurRadius) {
     context.fail('Error: Environment variable DEST_BUCKET missing');
     return;
